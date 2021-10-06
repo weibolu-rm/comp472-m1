@@ -7,15 +7,14 @@ Student ID 40058095
 
 
 ## Getting Started
-Create a virtual env e.g.
+### Create a virtual env e.g.
 ```
 virtualenv -p python3 venv
 source venv/bin/activate
 ```
 
-## Install dependencies
+### Install dependencies
 With the virtualenv activated:
 ```
 pip install -r requirements.txt
 ```
-
