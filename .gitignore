@@ -1,3 +1,9 @@
 __pycache__/
 venv/
 *$py.class
+
+# JupyterNotebooks used for testing
+*.ipynb
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
