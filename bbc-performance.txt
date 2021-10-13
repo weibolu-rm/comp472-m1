@@ -2,29 +2,29 @@
 (a) MultinomialNB default values, try 1
 
 (b) Confusion matrix
-[[112   0   1   0   0]
- [  1  74   2   0   2]
- [  3   0  79   0   0]
- [  0   0   0 105   0]
- [  0   0   1   0  65]]
+[[85  0  2  0  1]
+ [ 1 77  2  0  3]
+ [ 3  1 89  0  0]
+ [ 0  0  0 91  0]
+ [ 0  0  0  0 90]]
 
 (c)                precision    recall  f1-score   support
 
-     business      0.966     0.991     0.978       113
-entertainment      1.000     0.937     0.967        79
-     politics      0.952     0.963     0.958        82
-        sport      1.000     1.000     1.000       105
-         tech      0.970     0.985     0.977        66
+     business      0.955     0.966     0.960        88
+entertainment      0.987     0.928     0.957        83
+     politics      0.957     0.957     0.957        93
+        sport      1.000     1.000     1.000        91
+         tech      0.957     1.000     0.978        90
 
-     accuracy                          0.978       445
-    macro avg      0.977     0.975     0.976       445
- weighted avg      0.978     0.978     0.977       445
+     accuracy                          0.971       445
+    macro avg      0.971     0.970     0.970       445
+ weighted avg      0.971     0.971     0.971       445
 
 
 (d) 
-Accuracy of model: 97.75%
-Macro-average F1 of model: 97.61%
-Weighted-average F1 of model: 97.75%
+Accuracy of model: 97.08%
+Macro-average F1 of model: 97.04%
+Weighted-average F1 of model: 97.07%
 
 (e) Priors
 business: 22.92%
@@ -36,66 +36,66 @@ sport: 22.97%
 (f) Size of vocabulary: 29421
 
 (g) Number of world-tokens per class
-0. business: 129584
-1. entertainment: 100160
-2. tech: 150816
-3. politics: 130492
-4. sport: 165505
+0. business: 136069
+1. entertainment: 96074
+2. tech: 145775
+3. politics: 132843
+4. sport: 152850
 
-(h) Number of world-tokens in entire corpus: 676557
+(h) Number of world-tokens in entire corpus: 663611
 
 (i) Number and percentage of words with a frequency of zero per class
-0. business: 18767 (14.48%)
-1. entertainment: 18884 (18.85%)
-2. tech: 19043 (12.63%)
-3. politics: 19909 (15.26%)
-4. sport: 18026 (10.89%)
+0. business: 18454 (13.56%)
+1. entertainment: 19229 (20.01%)
+2. tech: 19327 (13.26%)
+3. politics: 19664 (14.80%)
+4. sport: 18366 (12.02%)
 
 (j) Number and percentage of words with a frequency of one in entire corpus:
-20973 (3.10%)
+21132 (3.18%)
 
 (k) Two favorite words in vocabulary, and their log-prob
 "Zombie":
-0. business: -11.976690927248818
-1. entertainment: -10.162623534780385
-2. tech: -12.10202793049357
-3. politics: -11.982385196330322
-4. sport: -11.081762989674806
+0. business: -12.016666049012988
+1. entertainment: -11.740021196122866
+2. tech: -12.073660626173567
+3. politics: -11.996979917438624
+4. sport: -11.0146375809022
 
 "Potato":
-0. business: -11.976690927248818
-1. entertainment: -11.772061447214485
-2. tech: -10.715733569373679
-3. politics: -11.982385196330322
-4. sport: -10.794080917223024
+0. business: -12.016666049012988
+1. entertainment: -11.740021196122866
+2. tech: -10.687366265053676
+3. politics: -11.996979917438624
+4. sport: -11.0146375809022
 ================================================================
 ================================================================
 (a) MultinomialNB default values, try 2
 
 (b) Confusion matrix
-[[112   0   1   0   0]
- [  1  74   2   0   2]
- [  3   0  79   0   0]
- [  0   0   0 105   0]
- [  0   0   1   0  65]]
+[[85  0  2  0  1]
+ [ 1 77  2  0  3]
+ [ 3  1 89  0  0]
+ [ 0  0  0 91  0]
+ [ 0  0  0  0 90]]
 
 (c)                precision    recall  f1-score   support
 
-     business      0.966     0.991     0.978       113
-entertainment      1.000     0.937     0.967        79
-     politics      0.952     0.963     0.958        82
-        sport      1.000     1.000     1.000       105
-         tech      0.970     0.985     0.977        66
+     business      0.955     0.966     0.960        88
+entertainment      0.987     0.928     0.957        83
+     politics      0.957     0.957     0.957        93
+        sport      1.000     1.000     1.000        91
+         tech      0.957     1.000     0.978        90
 
-     accuracy                          0.978       445
-    macro avg      0.977     0.975     0.976       445
- weighted avg      0.978     0.978     0.977       445
+     accuracy                          0.971       445
+    macro avg      0.971     0.970     0.970       445
+ weighted avg      0.971     0.971     0.971       445
 
 
 (d) 
-Accuracy of model: 97.75%
-Macro-average F1 of model: 97.61%
-Weighted-average F1 of model: 97.75%
+Accuracy of model: 97.08%
+Macro-average F1 of model: 97.04%
+Weighted-average F1 of model: 97.07%
 
 (e) Priors
 business: 22.92%
@@ -107,66 +107,66 @@ sport: 22.97%
 (f) Size of vocabulary: 29421
 
 (g) Number of world-tokens per class
-0. business: 129584
-1. entertainment: 100160
-2. tech: 150816
-3. politics: 130492
-4. sport: 165505
+0. business: 136069
+1. entertainment: 96074
+2. tech: 145775
+3. politics: 132843
+4. sport: 152850
 
-(h) Number of world-tokens in entire corpus: 676557
+(h) Number of world-tokens in entire corpus: 663611
 
 (i) Number and percentage of words with a frequency of zero per class
-0. business: 18767 (14.48%)
-1. entertainment: 18884 (18.85%)
-2. tech: 19043 (12.63%)
-3. politics: 19909 (15.26%)
-4. sport: 18026 (10.89%)
+0. business: 18454 (13.56%)
+1. entertainment: 19229 (20.01%)
+2. tech: 19327 (13.26%)
+3. politics: 19664 (14.80%)
+4. sport: 18366 (12.02%)
 
 (j) Number and percentage of words with a frequency of one in entire corpus:
-20973 (3.10%)
+21132 (3.18%)
 
 (k) Two favorite words in vocabulary, and their log-prob
 "Zombie":
-0. business: -11.976690927248818
-1. entertainment: -10.162623534780385
-2. tech: -12.10202793049357
-3. politics: -11.982385196330322
-4. sport: -11.081762989674806
+0. business: -12.016666049012988
+1. entertainment: -11.740021196122866
+2. tech: -12.073660626173567
+3. politics: -11.996979917438624
+4. sport: -11.0146375809022
 
 "Potato":
-0. business: -11.976690927248818
-1. entertainment: -11.772061447214485
-2. tech: -10.715733569373679
-3. politics: -11.982385196330322
-4. sport: -10.794080917223024
+0. business: -12.016666049012988
+1. entertainment: -11.740021196122866
+2. tech: -10.687366265053676
+3. politics: -11.996979917438624
+4. sport: -11.0146375809022
 ================================================================
 ================================================================
 (a) MultinomialNB default values, try 3
 
 (b) Confusion matrix
-[[111   0   1   0   1]
- [  1  77   1   0   0]
- [  4   1  77   0   0]
- [  0   0   0 105   0]
- [  0   0   1   0  65]]
+[[85  0  2  0  1]
+ [ 0 79  2  0  2]
+ [ 5  1 87  0  0]
+ [ 0  0  0 91  0]
+ [ 0  1  0  0 89]]
 
 (c)                precision    recall  f1-score   support
 
-     business      0.957     0.982     0.969       113
-entertainment      0.987     0.975     0.981        79
-     politics      0.963     0.939     0.951        82
-        sport      1.000     1.000     1.000       105
-         tech      0.985     0.985     0.985        66
+     business      0.944     0.966     0.955        88
+entertainment      0.975     0.952     0.963        83
+     politics      0.956     0.935     0.946        93
+        sport      1.000     1.000     1.000        91
+         tech      0.967     0.989     0.978        90
 
-     accuracy                          0.978       445
-    macro avg      0.978     0.976     0.977       445
- weighted avg      0.978     0.978     0.977       445
+     accuracy                          0.969       445
+    macro avg      0.969     0.968     0.968       445
+ weighted avg      0.969     0.969     0.968       445
 
 
 (d) 
-Accuracy of model: 97.75%
-Macro-average F1 of model: 97.72%
-Weighted-average F1 of model: 97.75%
+Accuracy of model: 96.85%
+Macro-average F1 of model: 96.84%
+Weighted-average F1 of model: 96.85%
 
 (e) Priors
 business: 22.92%
@@ -178,66 +178,66 @@ sport: 22.97%
 (f) Size of vocabulary: 29421
 
 (g) Number of world-tokens per class
-0. business: 129584
-1. entertainment: 100160
-2. tech: 150816
-3. politics: 130492
-4. sport: 165505
+0. business: 136069
+1. entertainment: 96074
+2. tech: 145775
+3. politics: 132843
+4. sport: 152850
 
-(h) Number of world-tokens in entire corpus: 676557
+(h) Number of world-tokens in entire corpus: 663611
 
 (i) Number and percentage of words with a frequency of zero per class
-0. business: 18767 (14.48%)
-1. entertainment: 18884 (18.85%)
-2. tech: 19043 (12.63%)
-3. politics: 19909 (15.26%)
-4. sport: 18026 (10.89%)
+0. business: 18454 (13.56%)
+1. entertainment: 19229 (20.01%)
+2. tech: 19327 (13.26%)
+3. politics: 19664 (14.80%)
+4. sport: 18366 (12.02%)
 
 (j) Number and percentage of words with a frequency of one in entire corpus:
-20973 (3.10%)
+21132 (3.18%)
 
 (k) Two favorite words in vocabulary, and their log-prob
 "Zombie":
-0. business: -20.98244767439909
-1. entertainment: -10.12823419909672
-2. tech: -21.13417570938651
-3. politics: -20.989430119115553
-4. sport: -11.323577281857492
+0. business: -21.031279382859992
+1. entertainment: -20.68324500162074
+2. tech: -21.100180170335864
+3. politics: -21.007285777722096
+4. sport: -11.244034396106377
 
 "Potato":
-0. business: -20.98244767439909
-1. entertainment: -20.724893931880295
-2. tech: -10.825189715964429
-3. politics: -20.989430119115553
-4. sport: -10.918128839721579
+0. business: -21.031279382859992
+1. entertainment: -20.68324500162074
+2. tech: -10.791194176913782
+3. politics: -21.007285777722096
+4. sport: -11.244034396106377
 ================================================================
 ================================================================
 (a) MultinomialNB default values, try 4
 
 (b) Confusion matrix
-[[112   0   1   0   0]
- [  1  74   2   0   2]
- [  3   0  79   0   0]
- [  0   0   0 105   0]
- [  0   0   1   0  65]]
+[[85  0  2  0  1]
+ [ 1 77  2  0  3]
+ [ 3  1 89  0  0]
+ [ 0  0  0 91  0]
+ [ 0  0  0  0 90]]
 
 (c)                precision    recall  f1-score   support
 
-     business      0.966     0.991     0.978       113
-entertainment      1.000     0.937     0.967        79
-     politics      0.952     0.963     0.958        82
-        sport      1.000     1.000     1.000       105
-         tech      0.970     0.985     0.977        66
+     business      0.955     0.966     0.960        88
+entertainment      0.987     0.928     0.957        83
+     politics      0.957     0.957     0.957        93
+        sport      1.000     1.000     1.000        91
+         tech      0.957     1.000     0.978        90
 
-     accuracy                          0.978       445
-    macro avg      0.977     0.975     0.976       445
- weighted avg      0.978     0.978     0.977       445
+     accuracy                          0.971       445
+    macro avg      0.971     0.970     0.970       445
+ weighted avg      0.971     0.971     0.971       445
 
 
 (d) 
-Accuracy of model: 97.75%
-Macro-average F1 of model: 97.61%
-Weighted-average F1 of model: 97.75%
+Accuracy of model: 97.08%
+Macro-average F1 of model: 97.04%
+Weighted-average F1 of model: 97.07%
 
 (e) Priors
 business: 22.92%
@@ -249,36 +249,36 @@ sport: 22.97%
 (f) Size of vocabulary: 29421
 
 (g) Number of world-tokens per class
-0. business: 129584
-1. entertainment: 100160
-2. tech: 150816
-3. politics: 130492
-4. sport: 165505
+0. business: 136069
+1. entertainment: 96074
+2. tech: 145775
+3. politics: 132843
+4. sport: 152850
 
-(h) Number of world-tokens in entire corpus: 676557
+(h) Number of world-tokens in entire corpus: 663611
 
 (i) Number and percentage of words with a frequency of zero per class
-0. business: 18767 (14.48%)
-1. entertainment: 18884 (18.85%)
-2. tech: 19043 (12.63%)
-3. politics: 19909 (15.26%)
-4. sport: 18026 (10.89%)
+0. business: 18454 (13.56%)
+1. entertainment: 19229 (20.01%)
+2. tech: 19327 (13.26%)
+3. politics: 19664 (14.80%)
+4. sport: 18366 (12.02%)
 
 (j) Number and percentage of words with a frequency of one in entire corpus:
-20973 (3.10%)
+21132 (3.18%)
 
 (k) Two favorite words in vocabulary, and their log-prob
 "Zombie":
-0. business: -12.063374925752361
-1. entertainment: -10.159859803361424
-2. tech: -12.190930242500997
-3. politics: -12.069176232490307
-4. sport: -11.100456056334867
+0. business: -12.104088522204611
+1. entertainment: -11.821658568144791
+2. tech: -12.162085345786851
+3. politics: -12.084042478566454
+4. sport: -11.03226609198822
 
 "Potato":
-0. business: -12.063374925752361
-1. entertainment: -11.854455524135831
-2. tech: -10.72459317370757
-3. politics: -12.069176232490307
-4. sport: -10.804190240191694
+0. business: -12.104088522204611
+1. entertainment: -11.821658568144791
+2. tech: -10.695748276993424
+3. politics: -12.084042478566454
+4. sport: -11.03226609198822
 ================================================================

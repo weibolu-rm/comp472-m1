@@ -1,0 +1,21 @@
+(a) Although all metrics yield similar results, I believe that 'accuracy of model' is more 
+important. This is because we're interested in the general classification of documents in the 
+correct class. Because of that, there is no emphasis on any given class, i.e. classifying 
+'business' documents correctly everytime is no more important than any other given class.
+
+(b) The performance of try 1 and 2 are identical. This is because the training and testing sets, 
+as well as the hyper parameters are the same. The models are deterministic, i.e. given the same 
+training set and the same testing set, we will always get the same results since each calculation 
+is done in the same order.
+
+Even by using the same training and testing sets, try 3 has different results since we set the 
+smoothing value to 0.0001. The overall performance has gone down a little bit as a result (using this dataset).
+Interstingly, the log-probs of the two words I've chosen are significantly different:
+In try 1 and 2, the difference of the log-prob of the words for each class is a lot closer,
+whereas in try 3, some of the log-probs are significantly lower (i.e. the model is a lot more 'certain'
+that it isn't part of those classes)
+
+Try 4 seems identical to 1 and 2 at first, but looking at the log-probs of the two chosen words, they're
+slightly different. This makes sense since the smoothing value was set to 0.9 (which is almost 1, the default).
+
+

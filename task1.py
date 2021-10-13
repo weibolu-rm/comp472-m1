@@ -115,19 +115,22 @@ def analyze_performance(name, y_true, y_pred, corpus, clf, classes, append=False
         f.write("================================================================\n")
 
 # Performing analysis
+def main():
+    clf = MultinomialNB()
+    y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
+    analyze_performance("MultinomialNB default values, try 1", y_true, y_pred, corpus, clf, classes)
 
-clf = MultinomialNB()
-y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
-analyze_performance("MultinomialNB default values, try 1", y_true, y_pred, corpus, clf, classes)
+    clf = MultinomialNB()
+    y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
+    analyze_performance("MultinomialNB default values, try 2", y_true, y_pred, corpus, clf, classes, True)
 
-clf = MultinomialNB()
-y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
-analyze_performance("MultinomialNB default values, try 2", y_true, y_pred, corpus, clf, classes, True)
+    clf = MultinomialNB(alpha=0.0001)
+    y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
+    analyze_performance("MultinomialNB default values, try 3", y_true, y_pred, corpus, clf, classes, True)
 
-clf = MultinomialNB(alpha=0.0001)
-y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
-analyze_performance("MultinomialNB default values, try 3", y_true, y_pred, corpus, clf, classes, True)
+    clf = MultinomialNB(alpha=0.9)
+    y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
+    analyze_performance("MultinomialNB default values, try 4", y_true, y_pred, corpus, clf, classes, True)
 
-clf = MultinomialNB(alpha=0.9)
-y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
-analyze_performance("MultinomialNB default values, try 4", y_true, y_pred, corpus, clf, classes, True)
+if __name__ == "__main__":
+    main()
