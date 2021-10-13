@@ -8,7 +8,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, f1_score
 
 
-base_path = "BBC/"
+base_path = "data/BBC/"
+out_path = "out/"
 
 # getting file distribution
 classes = {}
@@ -29,7 +30,7 @@ for item in os.listdir(base_path):
 plt.plot(list(classes.keys()), list(classes.values()), 'r')
 plt.xlabel("Classes")
 plt.ylabel("Count")
-plt.savefig("BBC-distribution.pdf")
+plt.savefig(f"{out_path}BBC-distribution.pdf")
 
 
 # Loading the corpus
@@ -60,7 +61,7 @@ def train_and_predict_MNB(clf, X_test, X_train, y_train):
 # Outputs information about the performance of our model to a file
 def analyze_performance(name, y_true, y_pred, corpus, clf, classes, append=False):
     write_mode = "a" if append else "w"
-    with open("bbc-performance.txt", write_mode) as f:
+    with open(f"{out_path}bbc-performance.txt", write_mode) as f:
         nb_confusion = confusion_matrix(y_true, y_pred)
         nb_f1_measure = classification_report(y_true, y_pred, target_names=corpus.target_names, digits=3)
         nb_f1_score_macro = f1_score(y_true, y_pred, average="macro")
