@@ -1,0 +1,15 @@
+From the results obtained from running each model 10x times, we can observe that NB has no variation in its 
+performance with a standard deviation of zero accross each metrics. Base-DT on the other hand has some variation,
+but it is very minimal: 0.03-0.05 standard deviation accross each metric. Similarly, Top-DT (max_depth = 8,
+min_samples_split = 4) has low variation. PER gas the highest degrees of variation, especially in 
+terms of macro average (5.55). The Base-MLP model has the lowest degree of variation after NB (0.002-0.005).
+Top-MLP has similar degrees of variation as both DesionTree models.
+
+In terms of performance, the Base-DT had the best results (95.85% weighted avg), followed by Top-DT (95.58%).
+However, this Top-DT often outperforms Base-DT. This lack of constistency could very well be due to the small 
+size of the dataset. PER had horrible performance accross the board, this could be due to the nature of the data set 
+which cannot be linearly represented. The Base-MLP model performed quite poorly as well, and definitely needs 
+tunning in terms of the activation, hidden layer sizes and solver methods. This is observable in the performance 
+demonstrated by Top-MLP (activation='tanh', hidden_layer_sizes=(30, 50)) which has significantly higher performance 
+than it's base counterpart. However, its performance is still average (72.41% weighted acc avg, 58.80% macro avg),
+especially when compared to both DT models.

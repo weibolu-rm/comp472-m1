@@ -1,6 +1,7 @@
 import pandas as pd
 import warnings
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, f1_score
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.tree import DecisionTreeClassifier
@@ -70,6 +71,8 @@ def train_and_predict(clf, X_test, X_train, y_train):
     y_pred = clf.predict(X_test)
     return y_pred
 
+
+
 def main():
     # Loading dataset
     drug_data = load_data()
@@ -114,12 +117,12 @@ def main():
 
     best_dt_params = clf.best_params_
 
-    clf = DecisionTreeClassifier(criterion=best_mlp_params['criterion'],
-                            max_depth=best_mlp_params['max_depth'],
-                            min_samples_split=best_mlp_params['min_samples_split'])
+    clf = DecisionTreeClassifier(criterion=best_dt_params['criterion'],
+                            max_depth=best_dt_params['max_depth'],
+                            min_samples_split=best_dt_params['min_samples_split'])
 
     y_pred = train_and_predict(clf, X_test, X_train, y_train)
-    analyze_performance("Top-DT", str(best_mlp_params), y_test, y_pred, True)
+    analyze_performance("Top-DT", str(best_dt_params), y_test, y_pred, True)
 
     # PER
     clf = Perceptron()
@@ -161,39 +164,54 @@ stochastic gradient descent, and default values for the rest of the parameters."
     ###############################################################################
 
 
-#     # GaussianNB
-    # for i in range(10):
+    clfs = [GaussianNB(),
+            DecisionTreeClassifier(),
+            DecisionTreeClassifier(criterion=best_dt_params['criterion'],
+                            max_depth=best_dt_params['max_depth'],
+                            min_samples_split=best_dt_params['min_samples_split']),
+            Perceptron(),
+            MLPClassifier(hidden_layer_sizes=(100), activation='logistic', solver='sgd'),
+            MLPClassifier(hidden_layer_sizes=best_mlp_params['hidden_layer_sizes'],
+                            activation=best_mlp_params['activation'],
+                            solver=best_mlp_params['solver'])]
 
-        # clf = GaussianNB()
-        # y_pred = train_and_predict(clf, X_test, X_train, y_train)
+    avg_acc = {}
+    avg_acc_std = {}
+    avg_macro_avg = {}
+    avg_macro_avg_std = {}
+    avg_wgt_avg = {}
+    avg_wgt_avg_std = {}
+    for clf in clfs:
+        acc = []
+        acc_std = 0
+        macro_avg = []
+        macro_std_std = 0
+        wgt_avg = []
+        wgt_std = 0
+        for i in range(10):
+            y_pred = train_and_predict(clf, X_test, X_train, y_train)
+            acc.append(accuracy_score(y_test, y_pred))
+            macro_avg.append(f1_score(y_test, y_pred, average="macro"))
+            wgt_avg.append(f1_score(y_test, y_pred, average="weighted"))
+        avg_acc.update({str(clf) : (sum(acc)/10)})
+        avg_acc_std.update({str(clf) : np.std(acc)})
+        avg_macro_avg.update({str(clf) : (sum(macro_avg)/10)})
+        avg_macro_avg_std.update({str(clf) : np.std(macro_avg)})
+        avg_wgt_avg.update({str(clf) : (sum(wgt_avg)/10)})
+        avg_wgt_avg_std.update({str(clf) : np.std(wgt_avg)})
 
-    # # Base-DT
-    # clf = DecisionTreeClassifier()
-    # y_pred = train_and_predict(clf, X_test, X_train, y_train)
 
-    # # Top-DT
-    # clf = DecisionTreeClassifier(criterion=best_mlp_params['criterion'],
-                            # max_depth=best_mlp_params['max_depth'],
-                            # min_samples_split=best_mlp_params['min_samples_split'])
-
-    # y_pred = train_and_predict(clf, X_test, X_train, y_train)
-
-    # # PER
-    # clf = Perceptron()
-    # y_pred = train_and_predict(clf, X_test, X_train, y_train)
-
-
-    # # Base-MLP
-    # clf = MLPClassifier(hidden_layer_sizes=(100), activation='logistic', solver='sgd')
-    # y_pred = train_and_predict(clf, X_test, X_train, y_train)
-
-
-
-    # # Top-MLP
-    # clf = MLPClassifier(hidden_layer_sizes=best_mlp_params['hidden_layer_sizes'],
-                            # activation=best_mlp_params['activation'],
-                            # solver=best_mlp_params['solver'])
-    # y_pred = train_and_predict(clf, X_test, X_train, y_train)
+    with open(f'{out_path}{benchmark_file}', 'a') as f:
+        f.write("#" * 100)
+        f.write("\nRunning 10x runs of each models:\n")
+        for key in avg_acc:
+            f.write(f"\n{key}\n")
+            f.write(f"average accuracy: {avg_acc[key]:.2%}\n")
+            f.write(f"std accuracy: {avg_acc_std[key]}\n")
+            f.write(f"average macro average F1: {avg_macro_avg[key]:.2%}\n")
+            f.write(f"std macro average F1: {avg_macro_avg_std[key]}\n")
+            f.write(f"average weighted average F1: {avg_wgt_avg[key]:.2%}\n")
+            f.write(f"std weighted average F1: {avg_wgt_avg_std[key]}\n")
 
 
 

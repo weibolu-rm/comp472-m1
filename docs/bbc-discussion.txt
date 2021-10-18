@@ -1,7 +1,7 @@
 (a) Although all metrics yield similar results, I believe that 'accuracy of model' is more 
 important. This is because we're interested in the general classification of documents in the 
 correct class. Because of that, there is no emphasis on any given class, i.e. classifying 
-'business' documents correctly everytime is no more important than any other given class.
+'business' documents correctly every time is no more important than any other given class.
 
 (b) The performance of try 1 and 2 are identical. This is because the training and testing sets, 
 as well as the hyper parameters are the same. The models are deterministic, i.e. given the same 

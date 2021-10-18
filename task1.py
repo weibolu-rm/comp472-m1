@@ -81,12 +81,12 @@ def analyze_performance(name, y_true, y_pred, corpus, clf, classes, append=False
             f.write(f"{i}: {classes[i]/total_count:.2%}\n")
 
         f.write(f"\n(f) Size of vocabulary: {clf.n_features_in_}\n")
-        f.write("\n(g) Number of world-tokens per class\n")
+        f.write("\n(g) Number of word-tokens per class\n")
 
         for i, name in enumerate(classes):
             f.write(f"{i}. {name}: {clf.feature_count_[i].sum():.0f}\n")
 
-        f.write(f"\n(h) Number of world-tokens in entire corpus: {nb_word_token_total:.0f}\n")
+        f.write(f"\n(h) Number of word-tokens in entire corpus: {nb_word_token_total:.0f}\n")
 
         f.write("\n(i) Number and percentage of words with a frequency of zero per class\n")
         for i, name in enumerate(classes):
@@ -127,11 +127,11 @@ def main():
 
     clf = MultinomialNB(alpha=0.0001)
     y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
-    analyze_performance("MultinomialNB default values, try 3", y_true, y_pred, corpus, clf, classes, True)
+    analyze_performance("MultinomialNB smoothing=0.0001", y_true, y_pred, corpus, clf, classes, True)
 
     clf = MultinomialNB(alpha=0.9)
     y_pred = train_and_predict_MNB(clf, X_test, X_train, y_train)
-    analyze_performance("MultinomialNB default values, try 4", y_true, y_pred, corpus, clf, classes, True)
+    analyze_performance("MultinomialNB smoothing=0.9", y_true, y_pred, corpus, clf, classes, True)
 
 if __name__ == "__main__":
     main()
