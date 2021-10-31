@@ -5,30 +5,30 @@ Params:
 Default
 
 (b) Confusion Matrix
-[[15  0  0  0  0]
- [10  3  0  0  0]
- [ 0  0 12  0  0]
- [ 0  0  0 37  5]
- [ 7  0  1  0 60]]
+[[ 4  0  0  0  0]
+ [ 1  5  0  0  0]
+ [ 0  0  3  0  0]
+ [ 0  0  0 14  0]
+ [ 2  2  3  0 16]]
 
 (c)
               precision    recall  f1-score   support
 
-       drugA      0.469     1.000     0.638        15
-       drugB      1.000     0.231     0.375        13
-       drugC      0.923     1.000     0.960        12
-       drugX      1.000     0.881     0.937        42
-       drugY      0.923     0.882     0.902        68
+       drugA      0.571     1.000     0.727         4
+       drugB      0.714     0.833     0.769         6
+       drugC      0.500     1.000     0.667         3
+       drugX      1.000     1.000     1.000        14
+       drugY      1.000     0.696     0.821        23
 
-    accuracy                          0.847       150
-   macro avg      0.863     0.799     0.762       150
-weighted avg      0.906     0.847     0.844       150
+    accuracy                          0.840        50
+   macro avg      0.757     0.906     0.797        50
+weighted avg      0.901     0.840     0.848        50
 
 
 (d) 
-Accuracy of model: 84.67%
-Macro-average F1 of model: 76.25%
-Weighted-average F1 of model: 84.44%
+Accuracy of model: 84.00%
+Macro-average F1 of model: 79.67%
+Weighted-average F1 of model: 84.79%
 ====================================================================================================
 ====================================================================================================
 (a)
@@ -37,62 +37,62 @@ Params:
 Default
 
 (b) Confusion Matrix
-[[15  0  0  0  0]
- [ 4  9  0  0  0]
- [ 0  0 12  0  0]
- [ 0  0  0 41  1]
- [ 0  0  0  0 68]]
+[[ 4  0  0  0  0]
+ [ 1  5  0  0  0]
+ [ 0  0  3  0  0]
+ [ 0  0  0 14  0]
+ [ 0  0  0  0 23]]
 
 (c)
               precision    recall  f1-score   support
 
-       drugA      0.789     1.000     0.882        15
-       drugB      1.000     0.692     0.818        13
-       drugC      1.000     1.000     1.000        12
-       drugX      1.000     0.976     0.988        42
-       drugY      0.986     1.000     0.993        68
+       drugA      0.800     1.000     0.889         4
+       drugB      1.000     0.833     0.909         6
+       drugC      1.000     1.000     1.000         3
+       drugX      1.000     1.000     1.000        14
+       drugY      1.000     1.000     1.000        23
 
-    accuracy                          0.967       150
-   macro avg      0.955     0.934     0.936       150
-weighted avg      0.972     0.967     0.966       150
+    accuracy                          0.980        50
+   macro avg      0.960     0.967     0.960        50
+weighted avg      0.984     0.980     0.980        50
 
 
 (d) 
-Accuracy of model: 96.67%
-Macro-average F1 of model: 93.62%
-Weighted-average F1 of model: 96.58%
+Accuracy of model: 98.00%
+Macro-average F1 of model: 95.96%
+Weighted-average F1 of model: 98.02%
 ====================================================================================================
 ====================================================================================================
 (a)
 Model: Top-DT
 Params:
-{'criterion': 'entropy', 'max_depth': 8, 'min_samples_split': 2}
+{'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2}
 
 (b) Confusion Matrix
-[[15  0  0  0  0]
- [ 4  9  0  0  0]
- [ 0  0 12  0  0]
- [ 0  0  0 41  1]
- [ 0  0  0  0 68]]
+[[ 4  0  0  0  0]
+ [ 1  5  0  0  0]
+ [ 0  0  3  0  0]
+ [ 0  0  0 14  0]
+ [ 0  0  0  0 23]]
 
 (c)
               precision    recall  f1-score   support
 
-       drugA      0.789     1.000     0.882        15
-       drugB      1.000     0.692     0.818        13
-       drugC      1.000     1.000     1.000        12
-       drugX      1.000     0.976     0.988        42
-       drugY      0.986     1.000     0.993        68
+       drugA      0.800     1.000     0.889         4
+       drugB      1.000     0.833     0.909         6
+       drugC      1.000     1.000     1.000         3
+       drugX      1.000     1.000     1.000        14
+       drugY      1.000     1.000     1.000        23
 
-    accuracy                          0.967       150
-   macro avg      0.955     0.934     0.936       150
-weighted avg      0.972     0.967     0.966       150
+    accuracy                          0.980        50
+   macro avg      0.960     0.967     0.960        50
+weighted avg      0.984     0.980     0.980        50
 
 
 (d) 
-Accuracy of model: 96.67%
-Macro-average F1 of model: 93.62%
-Weighted-average F1 of model: 96.58%
+Accuracy of model: 98.00%
+Macro-average F1 of model: 95.96%
+Weighted-average F1 of model: 98.02%
 ====================================================================================================
 ====================================================================================================
 (a)
@@ -101,30 +101,30 @@ Params:
 Default
 
 (b) Confusion Matrix
-[[ 0  0  0  0 15]
- [ 0  0  0  0 13]
- [ 0  0  0  0 12]
- [ 0  0  0  0 42]
- [ 0  0  0  0 68]]
+[[ 1  3  0  0  0]
+ [ 0  6  0  0  0]
+ [ 0  2  0  0  1]
+ [ 1 12  0  0  1]
+ [ 0  6  0  0 17]]
 
 (c)
               precision    recall  f1-score   support
 
-       drugA      0.000     0.000     0.000        15
-       drugB      0.000     0.000     0.000        13
-       drugC      0.000     0.000     0.000        12
-       drugX      0.000     0.000     0.000        42
-       drugY      0.453     1.000     0.624        68
+       drugA      0.500     0.250     0.333         4
+       drugB      0.207     1.000     0.343         6
+       drugC      0.000     0.000     0.000         3
+       drugX      0.000     0.000     0.000        14
+       drugY      0.895     0.739     0.810        23
 
-    accuracy                          0.453       150
-   macro avg      0.091     0.200     0.125       150
-weighted avg      0.206     0.453     0.283       150
+    accuracy                          0.480        50
+   macro avg      0.320     0.398     0.297        50
+weighted avg      0.476     0.480     0.440        50
 
 
 (d) 
-Accuracy of model: 45.33%
-Macro-average F1 of model: 12.48%
-Weighted-average F1 of model: 28.28%
+Accuracy of model: 48.00%
+Macro-average F1 of model: 29.71%
+Weighted-average F1 of model: 44.02%
 ====================================================================================================
 ====================================================================================================
 (a)
@@ -134,30 +134,30 @@ Params:
 stochastic gradient descent, and default values for the rest of the parameters.
 
 (b) Confusion Matrix
-[[ 0  0  0  5 10]
- [ 0  0  0  9  4]
- [ 0  0  0  6  6]
- [ 0  0  0 25 17]
- [ 0  0  0  1 67]]
+[[ 0  0  0  2  2]
+ [ 0  0  0  6  0]
+ [ 0  0  0  1  2]
+ [ 0  0  0 12  2]
+ [ 0  0  0  2 21]]
 
 (c)
               precision    recall  f1-score   support
 
-       drugA      0.000     0.000     0.000        15
-       drugB      0.000     0.000     0.000        13
-       drugC      0.000     0.000     0.000        12
-       drugX      0.543     0.595     0.568        42
-       drugY      0.644     0.985     0.779        68
+       drugA      0.000     0.000     0.000         4
+       drugB      0.000     0.000     0.000         6
+       drugC      0.000     0.000     0.000         3
+       drugX      0.522     0.857     0.649        14
+       drugY      0.778     0.913     0.840        23
 
-    accuracy                          0.613       150
-   macro avg      0.238     0.316     0.269       150
-weighted avg      0.444     0.613     0.512       150
+    accuracy                          0.660        50
+   macro avg      0.260     0.354     0.298        50
+weighted avg      0.504     0.660     0.568        50
 
 
 (d) 
-Accuracy of model: 61.33%
-Macro-average F1 of model: 26.95%
-Weighted-average F1 of model: 51.23%
+Accuracy of model: 66.00%
+Macro-average F1 of model: 29.77%
+Weighted-average F1 of model: 56.80%
 ====================================================================================================
 ====================================================================================================
 (a)
@@ -166,78 +166,78 @@ Params:
 {'activation': 'tanh', 'hidden_layer_sizes': (30, 50), 'solver': 'adam'}
 
 (b) Confusion Matrix
-[[13  0  0  2  0]
- [ 6  6  0  0  1]
- [ 0  0  5  7  0]
- [ 2  6 11 22  1]
- [ 0  0  2  3 63]]
+[[ 4  0  0  0  0]
+ [ 3  2  0  1  0]
+ [ 0  0  0  3  0]
+ [ 0  0  0 14  0]
+ [ 0  1  0  1 21]]
 
 (c)
               precision    recall  f1-score   support
 
-       drugA      0.619     0.867     0.722        15
-       drugB      0.500     0.462     0.480        13
-       drugC      0.278     0.417     0.333        12
-       drugX      0.647     0.524     0.579        42
-       drugY      0.969     0.926     0.947        68
+       drugA      0.571     1.000     0.727         4
+       drugB      0.667     0.333     0.444         6
+       drugC      0.000     0.000     0.000         3
+       drugX      0.737     1.000     0.848        14
+       drugY      1.000     0.913     0.955        23
 
-    accuracy                          0.727       150
-   macro avg      0.603     0.639     0.612       150
-weighted avg      0.748     0.727     0.732       150
+    accuracy                          0.820        50
+   macro avg      0.595     0.649     0.595        50
+weighted avg      0.792     0.820     0.788        50
 
 
 (d) 
-Accuracy of model: 72.67%
-Macro-average F1 of model: 61.24%
-Weighted-average F1 of model: 73.21%
+Accuracy of model: 82.00%
+Macro-average F1 of model: 59.49%
+Weighted-average F1 of model: 78.82%
 ====================================================================================================
 ####################################################################################################
 Running 10x runs of each models:
 
 GaussianNB()
-average accuracy: 84.67%
-std accuracy: 0.0
-average macro average F1: 76.25%
-std macro average F1: 0.0
-average weighted average F1: 84.44%
+average accuracy: 84.00%
+std accuracy: 1.1102230246251565e-16
+average macro average F1: 79.67%
+std macro average F1: 1.1102230246251565e-16
+average weighted average F1: 84.79%
 std weighted average F1: 0.0
 
 DecisionTreeClassifier()
-average accuracy: 96.67%
+average accuracy: 98.00%
 std accuracy: 1.1102230246251565e-16
-average macro average F1: 93.62%
+average macro average F1: 95.96%
 std macro average F1: 1.1102230246251565e-16
-average weighted average F1: 96.58%
-std weighted average F1: 1.1102230246251565e-16
+average weighted average F1: 98.02%
+std weighted average F1: 0.0
 
-DecisionTreeClassifier(criterion='entropy', max_depth=8)
-average accuracy: 96.67%
+DecisionTreeClassifier(max_depth=5)
+average accuracy: 98.00%
 std accuracy: 1.1102230246251565e-16
-average macro average F1: 93.62%
+average macro average F1: 95.96%
 std macro average F1: 1.1102230246251565e-16
-average weighted average F1: 96.58%
-std weighted average F1: 1.1102230246251565e-16
+average weighted average F1: 98.02%
+std weighted average F1: 0.0
 
 Perceptron()
-average accuracy: 45.33%
-std accuracy: 0.0
-average macro average F1: 12.48%
+average accuracy: 48.00%
+std accuracy: 1.1102230246251565e-16
+average macro average F1: 29.71%
 std macro average F1: 0.0
-average weighted average F1: 28.28%
+average weighted average F1: 44.02%
 std weighted average F1: 5.551115123125783e-17
 
 MLPClassifier(activation='logistic', hidden_layer_sizes=100, solver='sgd')
-average accuracy: 60.33%
-std accuracy: 0.007453559924999273
-average macro average F1: 26.48%
-std macro average F1: 0.0043171200756628005
-average weighted average F1: 50.51%
-std weighted average F1: 0.007100275605036407
+average accuracy: 63.60%
+std accuracy: 0.014966629547095779
+average macro average F1: 28.72%
+std macro average F1: 0.007678421013878384
+average weighted average F1: 54.89%
+std weighted average F1: 0.01323058649930641
 
 MLPClassifier(activation='tanh', hidden_layer_sizes=(30, 50))
-average accuracy: 71.13%
-std accuracy: 0.019333333333333338
-average macro average F1: 59.75%
-std macro average F1: 0.029689827878836842
-average weighted average F1: 71.02%
-std weighted average F1: 0.019357813117512696
+average accuracy: 84.20%
+std accuracy: 0.05400000000000002
+average macro average F1: 65.10%
+std macro average F1: 0.12061868671894414
+average weighted average F1: 81.68%
+std weighted average F1: 0.06982362265511012

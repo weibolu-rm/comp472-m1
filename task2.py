@@ -92,7 +92,9 @@ def main():
     X = df.drop('Drug', axis=1).values
     y = df['Drug'].values
 
-    X_test, X_train, y_test, y_train = train_test_split(X, y)
+    # I had reversed these previously...
+    # X_test, X_train, y_test, y_train = train_test_split(X, y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 
     # GaussianNB
